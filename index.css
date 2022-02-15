@@ -1,6 +1,7 @@
-/* ------------------------------------------- */
-/* Reset                                       */
-/* ------------------------------------------- */
+/* ------------------------------------------------- */
+/* Reset                                             */
+/* Ref: https://piccalil.li/blog/a-modern-css-reset/ */
+/* ------------------------------------------------- */
 
 /* Box sizing */
 *,
@@ -20,6 +21,12 @@ p,
 figure,
 picture {
     margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggest */
+ul[role="list"],
+ol[role="list"] {
+    list-style-type: none;
 }
 
 /* Set up the body */
