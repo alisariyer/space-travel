@@ -255,7 +255,9 @@ select {
 /* ------------------------------------------------- */
 
 .large-button {
+  position: relative;
   display: grid;
+  z-index: 1;
   /* align-items and justify-items: can be take a two value as place-items: center flex-start */
   place-items: center;
   padding: 0 2em;
@@ -263,4 +265,23 @@ select {
   /* aspect-ratio: width height; */
   aspect-ratio: 1;
   text-decoration: none;
+}
+
+.large-button::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: hsl( var(--clr-white) / .15);
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 500ms linear, transform 750ms ease-in-out;
+}
+
+.large-button:hover::after,
+.large-button:focus::after {
+  opacity: 1;
+  /* transform does not force the browser redraw objects so use it instead of width, height etc. */
+  transform: scale(1.5);
 }
