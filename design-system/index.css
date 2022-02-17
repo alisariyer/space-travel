@@ -255,7 +255,7 @@ select {
 
 .large-button {
   position: relative;
-  display: inline-grid;
+  display: grid;
   z-index: 1;
   /* align-items and justify-items: can be take a two value as place-items: center flex-start */
   place-items: center;
