@@ -14,6 +14,10 @@
   gap: var(--gap, 1rem);
 }
 
+.d-block {
+  display: block;
+}
+
 /* flow > * + * add margin to any child except has no adjacent sibling before */
 /* can be used also .flow > *:not(:first-child) */
 /* new css selectors: :is(el, el, ...) > p means each p in any el element */
