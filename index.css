@@ -132,6 +132,22 @@ select {
   max-width: 60rem;
 }
 
+.grid-container {
+  display: grid;
+  /* use 2rem here, for other uses set --container-gap with inline css */
+  column-gap: var(--container-gap, 2rem);
+  grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(2rem, 1fr);
+}
+
+.grid-container > *:first-child {
+  grid-column: 2;
+  outline: 1px solid red;
+}
+.grid-container > *:last-child {
+  grid-column: 3;
+  outline: 1px solid red;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
