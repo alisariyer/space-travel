@@ -21,6 +21,8 @@
     <link rel="stylesheet" href="./css/component.css">
     <link rel="stylesheet" href="./css/pages.css">
 
+    <script src="index.js" defer></script>
+
     <title>Web Travel Website</title>
 </head>
 
@@ -32,8 +34,8 @@
         </div>
         <!-- The aria-controls attribute identifies the element (or elements) whose contents or presence are controlled by the element on which the attribute is set -->
         <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false"><span class="sr-only">Menu</span></button>
-        <nav id="primary-navigation">
-            <ul class="primary-navigation underline-indicators flex uppercase letter-spacing-2">
+        <nav>
+            <ul id="primary-navigation" data-visible="false" class="primary-navigation underline-indicators flex uppercase letter-spacing-2">
                 <li class="active"><a class="text-white" href="index.html"><span>00</span>Home</a></li>
                 <li><a class="text-white" href="destination.html"><span>01</span>Destination</a></li>
                 <li><a class="text-white" href="crew.html"><span>02</span>Crew</a></li>
