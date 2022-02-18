@@ -34,7 +34,6 @@
 }
 
 .grid-container {
-  border: 5px solid limegreen;
   display: grid;
   text-align: center;
   /* shorthand: align-items justify-content */
@@ -59,12 +58,10 @@
 
   .grid-container>*:first-child {
     grid-column: 2;
-    outline: 1px solid red;
   }
   
   .grid-container>*:last-child {
     grid-column: 3;
-    outline: 1px solid red;
   }
 
   .grid-container--home {
@@ -74,14 +71,6 @@
     /* padding-bottom: 6rem; */
     align-items: end;
   }
-}
-
-.grid-container>*:first-child {
-  outline: 1px solid yellow;
-}
-
-.grid-container>*:last-child {
-  outline: 1px solid royalblue;
 }
 
 .sr-only {
