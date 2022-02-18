@@ -70,7 +70,7 @@
   .grid-container--home {
     /* another solution max(first-value, second-value) so it takes max value of them */
     /* padding-bottom: max(10vw, 150px); : At least 10vw or 150px */
-    /* padding-bottom: max(6rem, 1vh); : At least 6rem or 1vh */
+    padding-bottom: max(6rem, 20vh);
     /* padding-bottom: 6rem; */
     align-items: end;
   }

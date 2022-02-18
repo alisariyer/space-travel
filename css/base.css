@@ -8,6 +8,7 @@
   --clr-white: 0 0% 100%;
 
   /* font-sizes */
+
   /* clamp(min-value, middle-value, max-value) so it depends viewport */
   --fs-900: clamp(5rem, 8vw + 1rem, 9.375rem);
   --fs-800: 6.25rem;
@@ -19,6 +20,7 @@
   --fs-200: 0.875rem;
 
   /* font-families */
+
   --ff-serif: "Bellefair", serif;
   --ff-sans-cond: "Barlow Condensed", sans-serif;
   --ff-sans-normal: "Barlow", sans-serif;
@@ -49,6 +51,7 @@
 /* ------------------------------------------------- */
 
 /* box sizing */
+
 *,
 *::before,
 *::after {
@@ -56,6 +59,7 @@
 }
 
 /* reset margins */
+
 body,
 h1,
 h2,
