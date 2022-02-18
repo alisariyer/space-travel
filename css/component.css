@@ -41,6 +41,17 @@
     /* min(first-value, second-value) : Choose the smallest reference */
     padding: min(10rem, 3vh) 2rem;
     margin: 0;
+    background: hsl( var(--clr-white) / 0.05);
+    backdrop-filter: blur(1.5rem);
+  }
+
+  /* browser support */
+  /* if browser does not support backdrop-filter apply dark background*/
+  /* must be provided key and value, because some browsers may not support some units */
+  @supports not (backdrop-filter: blur(1.5rem)) {
+    .primary-navigation {
+      background: hsl( var(--clr-dark) / .9);
+    }
   }
 
   @media (max-width: 35rem) {
@@ -50,7 +61,6 @@
       z-index: 1000;
       /* shorthand of top right bottom left */
       inset: 0 0 0 20%;
-      background: black;
       list-style-type: none;
       /* min(first-value, second-value) : Choose the smallest reference */
       padding: min(10rem, 3vh) 2rem;
