@@ -190,6 +190,13 @@ select {
       padding: min(10rem, 3vh) 2rem;
     }
   }
+
+  /* Test if the user's primary input mechanism can hover over elements to avoid mobile long tap  */
+  @media (hover: hover) {
+    .underline-indicators > *:hover {
+      border-color: hsl( var(--clr-white) / .25);
+    }
+  }
 ```
 
 ```js
