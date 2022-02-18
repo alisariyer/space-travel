@@ -37,16 +37,30 @@
   
   .primary-navigation {
     --underline-gap: 2rem;
-    position: fixed;
-    z-index: 1000;
-    /* shorthand of top right bottom left */
-    inset: 0 0 0 20%;
-    background: black;
     list-style-type: none;
     /* min(first-value, second-value) : Choose the smallest reference */
     padding: min(10rem, 3vh) 2rem;
     margin: 0;
-    flex-direction: column;
+  }
+
+  @media (max-width: 35rem) {
+    .primary-navigation {
+    --underline-gap: .5rem;
+      position: fixed;
+      z-index: 1000;
+      /* shorthand of top right bottom left */
+      inset: 0 0 0 20%;
+      background: black;
+      list-style-type: none;
+      /* min(first-value, second-value) : Choose the smallest reference */
+      padding: min(10rem, 3vh) 2rem;
+      margin: 0;
+      flex-direction: column;
+    }
+
+    .primary-navigation.underline-indicators > .active {
+      border: 0;
+    }
   }
   
   .primary-navigation a {
