@@ -36,11 +36,17 @@
   }
   
   .primary-navigation {
-    --gap: 8rem;
     --underline-gap: 2rem;
+    position: fixed;
+    z-index: 1000;
+    /* shorthand of top right bottom left */
+    inset: 0 0 0 20%;
+    background: black;
     list-style-type: none;
-    padding: 0;
+    /* min(first-value, second-value) : Choose the smallest reference */
+    padding: min(10rem, 3vh) 2rem;
     margin: 0;
+    flex-direction: column;
   }
   
   .primary-navigation a {
