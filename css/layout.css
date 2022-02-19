@@ -1,0 +1,82 @@
+/* ------------------------------------------------- */
+/* Layout                                            */
+/* ------------------------------------------------- */
+
+.grid-container {
+  display: grid;
+  text-align: center;
+  /* shorthand: align-items justify-content */
+  place-items: center;
+  row-gap: 10%;
+  /* same as place-items for align all content */
+  /* place-content: center; */
+  padding-inline: 1rem;
+}
+
+.grid-container > * {
+  max-width: 50ch;
+}
+
+/* destination layout */
+
+.grid-container--destination {
+    --flow-space: 2rem;
+  grid-template-areas:
+    "title"
+    "image"
+    "tabs"
+    "content";
+}
+
+.numbered-title {
+    grid-area: title;
+}
+
+.grid-container--destination > img {
+    grid-area: image;
+    max-width: 50%;
+}
+
+.grid-container--destination > .tab-list {
+    grid-area: tabs;
+}
+
+.grid-container--destination > .destination-info {
+    grid-area: content;
+}
+
+.destination-meta {
+    flex-direction: column;
+    border-top: 1px solid hsl( var(--clr-white) / .1);
+    padding-top: 2.5rem;
+    margin-top: 2.5rem;
+    padding-bottom: 4rem;
+}
+
+@media (min-width: 45rem) {
+  .grid-container {
+    text-align: left;
+    /* use 2rem here, for other uses set --container-gap with inline css */
+    column-gap: var(--container-gap, 2rem);
+    grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(
+        1rem,
+        1fr
+      );
+  }
+
+  .grid-container > *:first-child {
+    grid-column: 2;
+  }
+
+  .grid-container > *:last-child {
+    grid-column: 3;
+  }
+
+  .grid-container--home {
+    /* another solution max(first-value, second-value) so it takes max value of them */
+    /* padding-bottom: max(10vw, 150px); : At least 10vw or 150px */
+    padding-bottom: max(6rem, 20vh);
+    /* padding-bottom: 6rem; */
+    align-items: end;
+  }
+}
