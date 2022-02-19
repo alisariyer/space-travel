@@ -112,6 +112,7 @@
       width: 1.5rem;
       aspect-ratio: 1;
       border: 0;
+      cursor: pointer;
     }
 
     .mobile-nav-toggle[aria-expanded="true"] {
