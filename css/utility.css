@@ -18,6 +18,10 @@
   display: block;
 }
 
+.center {
+  text-align: center;
+}
+
 /* flow > * + * add margin to any child except has no adjacent sibling before */
 /* can be used also .flow > *:not(:first-child) */
 /* new css selectors: :is(el, el, ...) > p means each p in any el element */
