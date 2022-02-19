@@ -166,37 +166,55 @@ select {
   transform: scale(1.5);
 }
 
+.primary-navigation {
+  /* min(first-value, second-value) : Choose the smallest reference */
+  padding: min(10rem, 3vh) 2rem;
+  background: hsl(var(--clr-white) / 0.05);
+  backdrop-filter: blur(1.5rem);
+}
+
+/* browser support */
+/* if browser does not support backdrop-filter apply dark background*/
+/* must be provided key and value, because some browsers may not support some units */
+@supports not (backdrop-filter: blur(1.5rem)) {
   .primary-navigation {
+    background: hsl(var(--clr-dark) / 0.9);
+  }
+}
+
+@media (max-width: 35rem) {
+  .primary-navigation {
+    /* shorthand of top right bottom left */
+    inset: 0 0 0 20%;
     /* min(first-value, second-value) : Choose the smallest reference */
     padding: min(10rem, 3vh) 2rem;
-    background: hsl( var(--clr-white) / 0.05);
-    backdrop-filter: blur(1.5rem);
   }
+}
 
-  /* browser support */
-  /* if browser does not support backdrop-filter apply dark background*/
-  /* must be provided key and value, because some browsers may not support some units */
-  @supports not (backdrop-filter: blur(1.5rem)) {
-    .primary-navigation {
-      background: hsl( var(--clr-dark) / .9);
-    }
+/* Test if the user's primary input mechanism can hover over elements to avoid mobile long tap  */
+@media (hover: hover) {
+  .underline-indicators > *:hover {
+    border-color: hsl(var(--clr-white) / 0.25);
   }
+}
 
-  @media (max-width: 35rem) {
-    .primary-navigation {
-      /* shorthand of top right bottom left */
-      inset: 0 0 0 20%;
-      /* min(first-value, second-value) : Choose the smallest reference */
-      padding: min(10rem, 3vh) 2rem;
-    }
-  }
+/* There two approaches */
+/* 1. Add .sr-only class for skip-to-content link so only screen readers see it */
+/* 2. Add another class for alls so anybody see by focusing with tab, otherwise hidden */
+.skip-to-content {
+  position: absolute;
+  z-index: 9999;
+  color: hsl(var(--clr-dark));
+  background: hsl(var(--clr-white));
+  padding: 0.5rem 1rem;
+  border-bottom-right-radius: 1rem;
+  transform: translateY(-100%);
+  transition: transform 0.5s ease-in-out;
+}
 
-  /* Test if the user's primary input mechanism can hover over elements to avoid mobile long tap  */
-  @media (hover: hover) {
-    .underline-indicators > *:hover {
-      border-color: hsl( var(--clr-white) / .25);
-    }
-  }
+.skip-to-content:focus {
+  transform: translateY(0);
+}
 ```
 
 ```js
