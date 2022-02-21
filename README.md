@@ -90,6 +90,7 @@ select {
   /* use utility class as .flex in container element */
   display: grid;
   /* this variable with a default or backup value provide inline css usage
+  (or ANY OTHER ELEMENT'S CSS RULE TO MODIFY LOCALLY AS --gap: 3rem;)
   as style="--gap: 2rem;"  so we do not need initialize --gap value here*/
   gap: var(--gap, 1rem);
 }
@@ -214,6 +215,16 @@ select {
 
 .skip-to-content:focus {
   transform: translateY(0);
+}
+
+.grid-container--destination {
+  /* Here we can modify locally a css variable defined in top element as root or html */
+    --flow-space: 2rem;
+  grid-template-areas:
+    "title"
+    "image"
+    "tabs"
+    "content";
 }
 ```
 
