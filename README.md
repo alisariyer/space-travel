@@ -48,6 +48,14 @@ Users should be able to:
 
 ### What I learned
 
+```html
+<!-- Use picture instead img to provide a fallback image, also use webp format to low image high quality -->
+    <picture>
+      <source srcset="./assets/destination/image-moon.webp" type="images/webp">
+      <img src="./assets/destination/image-moon.png" alt="the moon">
+    </picture>
+```
+
 ```css
 :root {
   /* use it in hsl with combining with alpha value after forward slash */
