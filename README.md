@@ -50,10 +50,54 @@ Users should be able to:
 
 ```html
 <!-- Use picture instead img to provide a fallback image, also use webp format to low image high quality -->
-    <picture>
-      <source srcset="./assets/destination/image-moon.webp" type="images/webp">
-      <img src="./assets/destination/image-moon.png" alt="the moon">
-    </picture>
+<picture>
+  <source srcset="./assets/destination/image-moon.webp" type="images/webp" />
+  <img src="./assets/destination/image-moon.png" alt="the moon" />
+</picture>
+
+<!-- tabs -->
+<div
+  class="tab-list underline-indicators flex"
+  role="tablist"
+  aria-label="destination list"
+>
+  <button
+    aria-selected="true"
+    role="tab"
+    aria-controls="moon-tab"
+    tabindex="0"
+    class="uppercase text-accent ff-sans-cond letter-spacing-2"
+  >
+    Moon
+  </button>
+  <button
+    aria-selected="false"
+    role="tab"
+    aria-controls="mars-tab"
+    tabindex="-1"
+    class="uppercase text-accent ff-sans-cond letter-spacing-2"
+  >
+    Mars
+  </button>
+  <button
+    aria-selected="false"
+    role="tab"
+    aria-controls="europa-tab"
+    tabindex="-1"
+    class="uppercase text-accent ff-sans-cond letter-spacing-2"
+  >
+    Europa
+  </button>
+  <button
+    aria-selected="false"
+    role="tab"
+    aria-controls="titan-tab"
+    tabindex="-1"
+    class="uppercase text-accent ff-sans-cond letter-spacing-2"
+  >
+    Titan
+  </button>
+</div>
 ```
 
 ```css
@@ -227,7 +271,7 @@ select {
 
 .grid-container--destination {
   /* Here we can modify locally a css variable defined in top element as root or html */
-    --flow-space: 2rem;
+  --flow-space: 2rem;
   grid-template-areas:
     "title"
     "image"
