@@ -167,6 +167,7 @@
     padding: var(--underline-gap, 1rem) 0;
     border: none;
     border-bottom: .2rem solid hsl( var(--clr-white) / 0);
+    background-color: transparent;
   }
   
   .underline-indicators > *:focus {
