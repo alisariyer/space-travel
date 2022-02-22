@@ -104,10 +104,14 @@ body {
 }
 
 /* make images easier to work with */
-img,
-picture {
+img{
   max-width: 100%;
   display: block;
+}
+
+/* do not set display property for picture element because used hidden attribute, usage of display overrides hidden */
+picture {
+  max-width: 100%;
 }
 
 /* make forms elements easier to work with */
