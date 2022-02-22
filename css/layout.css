@@ -66,6 +66,9 @@
     "content";
 }
 
+.grid-container--crew h2 {
+  color: hsl( var(--clr-white) / .5);
+}
 
 .grid-container--crew > img {
   grid-area: image;
