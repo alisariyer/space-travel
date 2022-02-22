@@ -1,7 +1,16 @@
 const tabList = document.querySelector('[role="tablist"]');
 const tabs = document.querySelectorAll('[role="tab"]');
+const articles = document.querySelectorAll('[role="tabpanel"]');
+
 let currentTabIndex = 0;
-let previousTabIndex = 0;
+let previousTabIndex = -1;
+
+tabs.forEach(tab => {
+    tab.addEventListener('click', (e) => {
+        articles.forEach(article => article.setAttribute('hidden', true));
+        articles[currentTabIndex].removeAttribute('hidden');
+    })
+})
 
 tabList.addEventListener("keydown", changeTab);
 
