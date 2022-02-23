@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="U-XA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A web space travel website">
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" type="image/png" sizes="32" href="./assets/favicon-32x32.png">
+
+    <!-- custom styles -->
+    <link rel="stylesheet" href="./css/initial.css">
+    <link rel="stylesheet" href="./css/main.css">
+
+    <script src="navigation.js" defer></script>
+    <script src="tabs.js" defer></script>
+
+    <title>Web Travel Website | Technology</title>
+</head>
+
+<body class="technology">
+    <a class="skip-to-content" href="#main">Skip to content</a>
+    <header class="primary-header flex">
+        <div>
+            <img src="./assets/shared/logo.svg" alt="space tourism logo" class="logo">
+        </div>
+        <!-- The aria-controls attribute identifies the element (or elements) whose contents or presence are controlled by the element on which the attribute is set -->
+        <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false"><span
+                class="sr-only">Menu</span></button>
+        <nav>
+            <ul id="primary-navigation" data-visible="false"
+                class="primary-navigation underline-indicators flex uppercase letter-spacing-2">
+                <li><a class="text-white" href="index.html"><span aria-hidden="true">00</span>Home</a></li>
+                <li class="active"><a class="text-white" href="destination.html"><span
+                            aria-hidden="true">01</span>Destination</a></li>
+                <li><a class="text-white" href="crew.html"><span aria-hidden="true">02</span>Crew</a></li>
+                <li><a class="text-white" href="technology.html"><span aria-hidden="true">03</span>Technology</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main id="main" class="grid-container grid-container--technology flow">
+        <h1 class="numbered-title"><span aria-hidden="true">03 </span>Space launch 101</h1>
+
+        <picture>
+            <source media="(orientation: landscape)" srcset="./assets/technology/image-launch-vehicle-landscape.jpg"
+                type="images/jpeg">
+            <img src="./assets/technology/image-launch-vehicle-portrait.jpg" alt="launch vehicle">
+        </picture>
+
+        <picture hidden>
+            <source media="(orientation: landscape)" srcset="./assets/technology/image-spaceport-landscape.jpg"
+                type="images/jpeg">
+            <img src="./assets/technology/image-spaceport-portrait.jpg" alt="spaceport">
+        </picture>
+
+        <picture hidden>
+            <source media="(orientation: landscape)" srcset="./assets/technology/image-space-capsule-landscape.jpg"
+                type="images/jpeg">
+            <img src="./assets/technology/image-space-capsule-portrait.jpg" alt="space capsule">
+        </picture>
+
+        <!-- numbers -->
+        <div class="tab-list number-indicators flex" style="justify-content: center;" role="tablist"
+            aria-label="technology list">
+            <button aria-selected="true" role="tab" aria-controls="launch-vehicle-tab" tabindex="0" data-index="0"><span
+                    class="sr-only">Launch vehicle</span>1</button>
+            <button aria-selected="false" role="tab" aria-controls="spaceport-tab" tabindex="-1" data-index="1"><span
+                    class="sr-only">Spaceport</span>2</button>
+            <button aria-selected="false" role="tab" aria-controls="space-capsule-tab" tabindex="-1"
+                data-index="2"><span class="sr-only">Space capsule</span>3</button>
+        </div>
+
+        <!-- Launch vehicle -->
+
+        <article class="technology-info flow" id="launch-vehicle-tab" tabindex="0" role="tabpanel">
+            <div class="flow" style="--flow-space: .5rem;">
+                <h3 class="ff-sans-cond uppercase letter-spacing-2 fs-400">The terminology...</h3>
+                <h2 class="fs-600 ff-serif uppercase">Launch vehicle</h2>
+            </div>
+            <p class="ff-sans-normal fs-300">A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's
+                surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in
+                operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!</p>
+
+        </article>
+
+        <!-- Spaceport -->
+
+        <article hidden class="technology-info flow" id="spaceport-tab" tabindex="0" role="tabpanel">
+            <h3>The terminology...</h3>
+            <h2 class="fs-900 ff-serif uppercase">Spaceport</h2>
+
+            <p>A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, by analogy to the seaport
+                for ships or airport for aircraft. Based in the famous Cape Canaveral, our spaceport is ideally situated
+                to take advantage of the Earth’s rotation for launch.</p>
+
+        </article>
+
+        <!-- Space capsule -->
+
+        <article hidden class="technology-info flow" id="space-capsule-tab" tabindex="0" role="tabpanel">
+            <h3>The terminology...</h3>
+            <h2 class="fs-900 ff-serif uppercase">Space capsule</h2>
+
+            <p>A space capsule is an often-crewed spacecraft that uses a blunt-body reentry capsule to reenter the
+                Earth's atmosphere without wings. Our capsule is where you'll spend your time during the flight. It
+                includes a space gym, cinema, and plenty of other activities to keep you entertained.</p>
+
+        </article>
+
+
+
+    </main>
+
+</body>
+
+</html>

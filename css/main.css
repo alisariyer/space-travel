@@ -215,8 +215,8 @@
 
 .number-indicators>* {
   cursor: pointer;
-  width: 5rem;
-  height: 5rem;
+  width: 3rem;
+  height: 3rem;
   background-color: transparent;
   color: hsl(var(--clr-white));
   border: 1px solid hsl(var(--clr-white) / .25);
@@ -324,6 +324,45 @@
   margin-top: 1rem;
 }
 
+/* technology layout */
+
+.grid-container--technology {
+  --flow-space: 2rem;
+  padding-inline: 0;
+  grid-template-areas: 
+  'title'
+  'image'
+  'numbers'
+  'content';
+}
+
+.grid-container--technology > picture {
+  grid-area: image;
+  height: 12rem;
+  object-fit: cover;
+  justify-self: stretch;
+  overflow-y: hidden;
+}
+
+.grid-container--technology > .number-indicators {
+  --gap: 1rem;
+  grid-area: numbers;
+}
+
+.grid-container--technology > .technology-info {
+  padding-inline: 1rem;
+  grid-area: content;
+}
+
+.technology-info h3 {
+  color: hsl( var(--clr-light));
+}
+
+.technology-info p {
+  color: hsl( var(--clr-light));
+  line-height: 1.6rem;
+}
+
 
 @media (min-width: 35rem) {
   .grid-container--crew {
@@ -344,6 +383,18 @@
   .destination-meta {
     flex-direction: row;
     justify-content: space-evenly;
+  }
+
+  .grid-container--technology > picture {
+    overflow-y: hidden;
+  }
+
+  .grid-container--technology > .technology-info {
+    padding-inline: 6rem;
+  }
+
+  .technology-info h2 {
+    font-size: var(--fs-700);
   }
 
 }
@@ -405,6 +456,33 @@
 
   .grid-container--crew>.dot-indicators {
     justify-self: start;
+  }
+
+  .grid-container--technology {
+    --flow-space: 4rem;
+    grid-template-columns: repeat(2, minmax(1rem, 1fr)) repeat(2, minmax(0, 32rem));
+    justify-content: start;
+    align-content:start;
+    grid-template-areas:
+      '. title title .'
+      '. numbers content image';
+  }
+
+  .grid-container--technology > picture {
+    align-self:stretch;
+    height: 24rem;
+  }
+
+  .number-indicators {
+    justify-self: start;
+    align-self: start;
+    flex-direction: column;
+  }
+
+  .grid-container--technology > .technology-info {
+    --flow-space: 1rem;
+    align-self: start;
+    padding-inline: 0;
   }
 }
 
