@@ -4,6 +4,7 @@ const articles = document.querySelectorAll('[role="tabpanel"]');
 const pictures = document.querySelectorAll("#main picture");
 
 let currentTabIndex = 0;
+let tabsLimit = tabs.length - 1;
 
 tabs.forEach((tab) => {
   tab.addEventListener("click", (e) => {
@@ -22,12 +23,12 @@ function changeTab(e) {
   // e.code is most convenient to use for pysical keys so
   // ArrowLeft and ArrowRight are used
   if (e.code === "ArrowLeft") {
-    currentTabIndex === 0 ? (currentTabIndex = 3) : currentTabIndex--;
+    currentTabIndex === 0 ? (currentTabIndex = tabsLimit) : currentTabIndex--;
     changeTabStatus();
   }
 
   if (e.code === "ArrowRight") {
-    currentTabIndex === 3 ? (currentTabIndex = 0) : currentTabIndex++;
+    currentTabIndex === tabsLimit ? (currentTabIndex = 0) : currentTabIndex++;
     changeTabStatus();
   }
 }
