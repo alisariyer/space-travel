@@ -30,7 +30,6 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Go to my github repository for the solution](https://github.com/alisariyer/space-travel)
 - Live Site URL: [See live site of my project](https://alisariyer.github.io/space-travel)
 
 ## My process
