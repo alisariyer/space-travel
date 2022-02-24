@@ -191,7 +191,7 @@
 }
 
 .tab-list {
-  --gap: 2.5rem;
+  --gap: 1.5rem;
 }
 
 .dot-indicators>* {
@@ -381,6 +381,13 @@
   .destination-meta {
     flex-direction: row;
     justify-content: space-evenly;
+  }
+
+  .tab-list {
+    --gap: 2rem;
+  }
+  .grid-container--destination h2 {
+    font-size: var(--fs-900)
   }
 
   .grid-container--technology > picture {
