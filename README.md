@@ -12,9 +12,7 @@ This is a solution to the [Space tourism website challenge on Frontend Mentor](h
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -33,7 +31,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Go to my github repository for the solution](https://github.com/alisariyer/space-travel)
-- Live Site URL: [See live site of my project](https://your-live-site-url.com)
+- Live Site URL: [See live site of my project](https://alisariyer.github.io/space-travel)
 
 ## My process
 
@@ -301,19 +299,10 @@ function changeTab(e) {
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+I learned a lot in this project, so I will continue to learn deeply in SASS, Bootstrap, Git and Github, React.js etc. 
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
+- Website - [Ali Sariyer](https://www.alisariyer.com)
+- Frontend Mentor - [@alisariyer](https://www.frontendmentor.io/profile/alisariyer)
+- Linkedin - [@alisariyer](https://www.linkedin.com/in/alisariyer)
