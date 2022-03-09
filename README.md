@@ -302,6 +302,6 @@ I learned a lot in this project, so I will continue to learn deeply in SASS, Boo
 
 ## Author
 
-- Website - [Ali Sariyer](https://www.alisariyer.com)
+- Website - [Ali Sariyer](https://alisariyer.github.io/alisariyer)
 - Frontend Mentor - [@alisariyer](https://www.frontendmentor.io/profile/alisariyer)
 - Linkedin - [@alisariyer](https://www.linkedin.com/in/alisariyer)
